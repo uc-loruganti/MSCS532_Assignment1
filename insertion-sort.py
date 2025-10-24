@@ -4,6 +4,9 @@ import argparse
 def insertion_sort(arr, length):
     print("Sorting array using Insertion Sort...")
     
+    if(length <= 1):
+        return arr
+
     for index in range(1, length):
         # Select the element to be positioned
         key = arr[index]
@@ -13,6 +16,7 @@ def insertion_sort(arr, length):
         while prevIndex >= 0 and key > arr[prevIndex]:
             arr[prevIndex + 1] = arr[prevIndex]
             prevIndex = prevIndex -1
+            # print("Current array state:", arr)
         arr[prevIndex + 1] = key
     return arr
 

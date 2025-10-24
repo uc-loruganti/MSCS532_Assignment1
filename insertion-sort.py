@@ -12,7 +12,7 @@ def insertion_sort(arr, length):
         key = arr[index]
 
         prevIndex = index - 1
-        # Ascending order : sort the element into its correct position 
+        # Descending order : sort the element into its correct position 
         while prevIndex >= 0 and key > arr[prevIndex]:
             arr[prevIndex + 1] = arr[prevIndex]
             prevIndex = prevIndex -1

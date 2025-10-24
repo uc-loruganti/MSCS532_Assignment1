@@ -3,7 +3,8 @@ import argparse
 
 def insertion_sort(arr, length):
     print("Sorting array using Insertion Sort...")
-    print("Original array:", arr)
+    return arr  
+    
     
 
 
@@ -14,4 +15,6 @@ if __name__ == "__main__":
     parser.add_argument("--elements", nargs="*", type=int, help="List of integers to sort")
     args = parser.parse_args()
     elements = args.elements
-    insertion_sort(elements, len(elements))
+    print("Original array:", elements)
+    sorted_array = insertion_sort(elements, len(elements))
+    print("Sorted array:", sorted_array)
